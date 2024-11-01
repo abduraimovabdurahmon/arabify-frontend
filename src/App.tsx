@@ -23,6 +23,9 @@ import { ThemeProvider } from "@mui/material";
 import Dashboard from "./pages/dashboard";
 import NotFound from "./pages/404";
 import Courses from "./pages/dashboard/courses";
+import Translate from "./pages/dashboard/translate";
+import News from "./pages/dashboard/news";
+import Balance from "./pages/dashboard/balance";
 
 function App() {
   return (
@@ -51,6 +54,9 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="/dashboard/courses" element = {<Courses/>} />
+                    <Route path="/dashboard/translate" element = {<Translate/>} />
+                    <Route path="/dashboard/news" element = {<News/>} />
+                    <Route path="/dashboard/balance" element = {<Balance/>} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
 

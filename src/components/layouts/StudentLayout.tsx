@@ -11,7 +11,7 @@ import Logo from "../Logo";
 import { Container, List, ListItem } from "@mui/material";
 import { Refine } from "@refinedev/core";
 import { Home } from "@mui/icons-material";
-import { MdSpaceDashboard } from "react-icons/md";
+import { MdOutlineVideocam, MdSpaceDashboard, MdPaid, MdOutlineGTranslate, MdNewspaper } from "react-icons/md";
 import { Header } from "../header";
 
 interface StudentLayoutProps {
@@ -45,7 +45,7 @@ const StudentLayout: React.FC<StudentLayoutProps> = ({ children }) => {
           list: "/dashboard/courses",
           meta: {
             label: "Barcha kurslar",
-            icons: ""
+            icon: <MdOutlineVideocam />
           }
         },
         {
@@ -53,7 +53,7 @@ const StudentLayout: React.FC<StudentLayoutProps> = ({ children }) => {
           list: "/dashboard/my-courses",
           meta: {
             label: "Mening kurslarim",
-            icons: ""
+            icon: <MdOutlineVideocam />
           }
         },
         {
@@ -61,7 +61,15 @@ const StudentLayout: React.FC<StudentLayoutProps> = ({ children }) => {
           list: "/dashboard/balance",
           meta: {
             label: "Mening balansim",
-            icons: ""
+            icon: <MdPaid />
+          }
+        },
+        {
+          name: "translate",
+          list: "/dashboard/translate",
+          meta: {
+            label: "Tarjimon",
+            icon: <MdOutlineGTranslate />
           }
         },
         {
@@ -69,7 +77,7 @@ const StudentLayout: React.FC<StudentLayoutProps> = ({ children }) => {
           list: "/dashboard/news",
           meta: {
             label: "Yangiliklar",
-            icons: ""
+            icon: <MdNewspaper />
           }
         }
       ]}
